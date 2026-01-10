@@ -5,11 +5,11 @@ class Seon < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://cli.seonology.com/releases/seon-darwin-arm64"
-      sha256 "2e97f2d3426f0bae0e0992d7bb6dc156b72a109542039d0442b0a2905505cd38"
+      url "https://github.com/seonNoh/seonology-cli/releases/download/v0.1.0/seon-darwin-arm64"
+      sha256 "d891e9df2f9e5810e33eb798bb57fc291962eba1d55a791e1e758276474c63d2"
     else
-      url "https://cli.seonology.com/releases/seon-darwin-amd64"
-      sha256 "d34b7395004206f95b0de621f5260e5bb47450cfe0b0db471ce7e0242bc5870c"
+      url "https://github.com/seonNoh/seonology-cli/releases/download/v0.1.0/seon-darwin-amd64"
+      sha256 "82b224b49265cae692696099d82241ce7f303710694483548ee0b51e8a94231d"
     end
   end
 
