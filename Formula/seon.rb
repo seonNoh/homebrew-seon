@@ -1,15 +1,15 @@
 class Seon < Formula
   desc "Seonology infrastructure management CLI"
   homepage "https://cli.seonology.com"
-  version "0.0.6"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://cli.seonology.com/releases/seon-darwin-arm64"
-      sha256 "152e789a7a1564a6dabc34ccf973d782f239e45ba08945f64b594663cca7ed5e"
+      sha256 "544e33e6198f76e545233bcb0b69b1ad79384df49eec128e398ca5c5c1381a80"
     else
       url "https://cli.seonology.com/releases/seon-darwin-amd64"
-      sha256 "eea337afa71fb71965a09a20984eee8706d0861d0b87d79c688daa8d3db28f7e"
+      sha256 "5bb0dc22f6b6584e68ca6cb4cbca989cf7a49ff0ba62465f3df1d03338a12026"
     end
   end
 
