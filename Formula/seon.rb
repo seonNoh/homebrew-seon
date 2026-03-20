@@ -1,7 +1,7 @@
 class Seon < Formula
   desc "Seonology infrastructure management CLI"
   homepage "https://cli.seonology.com"
-  version "0.0.13"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
