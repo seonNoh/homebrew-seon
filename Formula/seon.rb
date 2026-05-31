@@ -1,21 +1,21 @@
 class Seon < Formula
   desc "Seonology infrastructure management CLI"
   homepage "https://github.com/seonNoh/seonology-k8s-seonology-cli"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/seonNoh/seonology-k8s-seonology-cli/releases/assets/434418819",
+      url "https://api.github.com/repos/seonNoh/seonology-k8s-seonology-cli/releases/assets/434428547",
         using: :nounzip,
         headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
                   "Accept: application/octet-stream"]
-      sha256 "49973bbfd77b5545d2cbf8e70561179dbe85281e54bcd41d11d8c823cf2c774f"
+      sha256 "687fd69b984ce80e3532b4cec4cdf686064f7277735391da09b1e5fb21880ce7"
     else
-      url "https://api.github.com/repos/seonNoh/seonology-k8s-seonology-cli/releases/assets/434418820",
+      url "https://api.github.com/repos/seonNoh/seonology-k8s-seonology-cli/releases/assets/434428563",
         using: :nounzip,
         headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
                   "Accept: application/octet-stream"]
-      sha256 "c3b4e68ebc04571d9400509ad491eab094afe424a0200aab8cad6488df424961"
+      sha256 "dac06244d1599b37ec984b98aeacd35bcc0323e090e7c3394422c43f9e922b6e"
     end
   end
 
