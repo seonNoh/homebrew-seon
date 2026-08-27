@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="enif-title enif-desc">
+  <title id="enif-title">Seon installation flow</title>
+  <desc id="enif-desc">Homebrew resolves the tap, verifies the platform artifact, and installs the Seon command.</desc>
+  <style>
+    .enif-t{font-family:"Pretendard",system-ui,sans-serif;fill:#f0f6fc}.enif-b{font-family:"Pretendard",system-ui,sans-serif;fill:#c3ccd6}.enif-d{font-family:"Pretendard",system-ui,sans-serif;fill:#939da8}.enif-m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;fill:#939da8}.enif-fl{stroke-dasharray:5 6;animation:enif-flow 2s linear infinite}@keyframes enif-flow{to{stroke-dashoffset:-22}}@media (prefers-reduced-motion:reduce){.enif-fl{animation:none}}
+  </style>
+  <defs>
+    <filter id="enif-sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="-3" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".5"/></filter>
+    <filter id="enif-shl" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="-4" dy="13" stdDeviation="11" flood-color="#000" flood-opacity=".58"/></filter>
+    <filter id="enif-gl" x="-60%" y="-90%" width="220%" height="280%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#7c9fff" flood-opacity=".4"/><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".45"/></filter>
+    <linearGradient id="enif-s" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#1b222c"/><stop offset="1" stop-color="#151b23"/></linearGradient>
+    <linearGradient id="enif-sl" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#222b38"/><stop offset="1" stop-color="#19202a"/></linearGradient>
+    <marker id="enif-t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#7c9fff"/></marker>
+  </defs>
+  <rect width="960" height="540" fill="#0d1117"/>
+  <text class="enif-t" x="48" y="38" font-size="16" font-weight="600">Seon installation flow</text>
+  <text class="enif-d" x="48" y="58" font-size="11.5">One platform-specific binary is selected, verified, and linked as seon.</text>
+  <g filter="url(#enif-sh)"><rect x="48" y="160" width="224" height="190" rx="12" fill="url(#enif-s)" stroke="#252d38"/><path d="M60 161H260" stroke="rgba(255,255,255,.05)"/><text class="enif-b" x="66" y="194" font-size="13" font-weight="500">Terminal</text><rect x="66" y="220" width="188" height="34" rx="8" fill="#1e2530"/><text class="enif-m" x="80" y="242" font-size="10.5">brew tap seonNoh/seon</text><rect x="66" y="270" width="188" height="52" rx="8" fill="#1e2530"/><text class="enif-m" x="80" y="292" font-size="10.5">brew install --cask</text><text class="enif-m" x="80" y="308" font-size="10.5">seonNoh/seon/seon</text></g>
+  <g filter="url(#enif-shl)"><rect x="352" y="136" width="256" height="238" rx="12" fill="url(#enif-sl)" stroke="#33404f"/><path d="M364 137H596" stroke="#7c9fff" stroke-opacity=".4"/><text class="enif-t" x="370" y="174" font-size="13" font-weight="500">Homebrew Cask</text><rect x="370" y="200" width="220" height="34" rx="8" fill="#232c39"/><text class="enif-d" x="384" y="222" font-size="11">Detects OS and architecture</text><rect x="370" y="250" width="220" height="34" rx="8" fill="#232c39"/><text class="enif-d" x="384" y="272" font-size="11">Verifies pinned SHA-256</text><rect x="370" y="300" width="220" height="42" rx="9" fill="#232c39" filter="url(#enif-gl)"/><text class="enif-t" x="384" y="326" font-size="11">Links selected binary</text></g>
+  <g filter="url(#enif-sh)"><rect x="688" y="160" width="224" height="190" rx="12" fill="url(#enif-s)" stroke="#252d38"/><path d="M700 161H900" stroke="rgba(255,255,255,.05)"/><text class="enif-b" x="706" y="194" font-size="13" font-weight="500">Installed command</text><rect x="706" y="220" width="188" height="34" rx="8" fill="#1e2530"/><text class="enif-m" x="720" y="242" font-size="10.5">seon --version</text><rect x="706" y="270" width="188" height="52" rx="8" fill="#1e2530"/><text class="enif-d" x="720" y="292" font-size="11">Homebrew-managed</text><text class="enif-d" x="720" y="308" font-size="11">installation</text></g>
+  <path class="enif-fl" d="M272 255H344" fill="none" stroke="#7c9fff" stroke-width="1.6" stroke-linecap="round" marker-end="url(#enif-t)"/><path class="enif-fl" d="M608 255H680" fill="none" stroke="#7c9fff" stroke-width="1.6" stroke-linecap="round" marker-end="url(#enif-t)"/>
+  <text class="enif-d" x="48" y="482" font-size="11">Source: Casks/seon.rb</text>
+</svg>

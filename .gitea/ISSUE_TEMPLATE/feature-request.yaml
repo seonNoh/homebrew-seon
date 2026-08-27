@@ -1,0 +1,28 @@
+name: Feature request
+about: Propose an improvement to the tap documentation or validation
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: Generated Cask metadata is managed by the Seon CLI release pipeline.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user or maintainer problem that needs to be solved.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the smallest change that resolves the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: List any existing commands or documentation that you evaluated.

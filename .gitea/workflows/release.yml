@@ -1,0 +1,28 @@
+name: Release validation
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: https://gitea.com/actions/checkout@v4
+      - name: Verify repository contract
+        run: python3 verify.py
+      - name: Check Cask syntax
+        run: ruby -c Casks/seon.rb
+      - name: Build release evidence archive
+        run: |
+          mkdir -p dist
+          tar -czf "dist/homebrew-seon-${{ gitea.ref_name }}.tar.gz" Casks README.md README.ko.md README.ja.md LICENSE
+          shasum -a 256 "dist/homebrew-seon-${{ gitea.ref_name }}.tar.gz" > dist/SHA256SUMS
+      - name: Upload release evidence
+        uses: https://gitea.com/actions/upload-artifact@v3
+        with:
+          name: "homebrew-seon-${{ gitea.ref_name }}"
+          path: dist/
+          if-no-files-found: error
