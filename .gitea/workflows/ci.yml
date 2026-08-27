@@ -19,4 +19,6 @@ jobs:
       - name: Run verifier tests
         run: python3 -m unittest tests/test_verify.py -v
       - name: Check Cask syntax
-        run: ruby -c Casks/seon.rb
+        uses: docker://ruby:3.3
+        with:
+          args: ruby -c Casks/seon.rb

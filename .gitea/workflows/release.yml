@@ -14,7 +14,9 @@ jobs:
       - name: Verify repository contract
         run: python3 verify.py
       - name: Check Cask syntax
-        run: ruby -c Casks/seon.rb
+        uses: docker://ruby:3.3
+        with:
+          args: ruby -c Casks/seon.rb
       - name: Build release evidence archive
         run: |
           mkdir -p dist

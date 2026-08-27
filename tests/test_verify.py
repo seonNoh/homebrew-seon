@@ -33,6 +33,16 @@ class RepositoryVerificationTest(unittest.TestCase):
 
         self.assertIn("missing required file: README.md", errors)
 
+    def test_workflows_use_a_ruby_container_for_cask_syntax(self):
+        for workflow_name in ("ci.yml", "release.yml"):
+            workflow = (
+                REPOSITORY_ROOT / ".gitea" / "workflows" / workflow_name
+            ).read_text(encoding="utf-8")
+
+            self.assertIn("uses: docker://ruby:3.3", workflow, workflow_name)
+            self.assertIn("args: ruby -c Casks/seon.rb", workflow, workflow_name)
+            self.assertNotIn("github.com/ruby/setup-ruby", workflow, workflow_name)
+
 
 if __name__ == "__main__":
     unittest.main()
